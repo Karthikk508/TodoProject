@@ -1,0 +1,42 @@
+<html> 
+
+<head> Html page </head>
+<body> I am a html page </body>
+
+</html>
+
+
+///Tags
+
+   <th> => table header,
+   <td> => table data,
+   
+   <thead>
+   
+      <tr>
+     
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      
+      </tr>
+   
+   </thead>
+   
+   <tbody>
+   
+      <tr>
+   
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      
+      </tr>
+   
+   </tbody>
+
+
+
+
