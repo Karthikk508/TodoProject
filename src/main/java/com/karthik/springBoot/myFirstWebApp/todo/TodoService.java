@@ -7,6 +7,8 @@ import java.util.function.Predicate;
 
 import org.springframework.stereotype.Service;
 
+import jakarta.validation.Valid;
+
 @Service
 public class TodoService {
 	
@@ -34,7 +36,7 @@ public class TodoService {
 		list.add(todo);
 	}
 	
-	public void deleteTodo(int id,String string) {
+	public void deleteById(int id) {
 		
 		//Functional programming 
 		
@@ -49,16 +51,12 @@ public class TodoService {
 //			}
 //		}
 	}
-	public void updateTodo(int id,String update) {
+	public void updateTodo(@Valid Todo todo) {
+		
+		deleteById(todo.getId());
+		list.add(todo);
 	
-		for(int i = 0; i<list.size(); i++) {
-			
-			if(list.get(i).getId() == id) {
-				
-				list.get(i).setDescription(update);
-			}
-		}
-	
+
 	}
 	public Todo findById(int id) {
 		

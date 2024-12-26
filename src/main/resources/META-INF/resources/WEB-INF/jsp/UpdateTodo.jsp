@@ -19,20 +19,27 @@
      
      <form:form method = "post" modelAttribute = "todo">
      
-        Description : <form:input type = "text" path = "description" required = "required"/> <br>
-                      <form:errors path = "description" cssClass = "text-warning"/> <br>
+	        <fieldset class = "mb-3">
+		         <form:label path = "description" > Description </form:label>
+			     <form:input type = "text" path = "description" required = "required"/>
+			     <form:errors path = "description" cssClass = "text-warning"/>
+		    </fieldset>
+		    
+		    <fieldset class = "mb-3">
+		         <form:label path = "targetDate" > Target date </form:label>
+			     <form:input type = "text" path = "targetDate" required = "required"/>
+			     <form:errors path = "targetDate" cssClass = "text-warning"/>
+		    </fieldset>
         
         
-        <input type = "submit" class = "btn btn-success">
-     
-     
+	        <input type = "submit" class = "btn btn-success">
+	     
+	     
      </form:form>
      
      </div>
      
-     
-     
-   
+    
      
      <script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js">  </script>
 	 <script src="webjars/jquery/3.6.0/jquery.min.js">  </script>
