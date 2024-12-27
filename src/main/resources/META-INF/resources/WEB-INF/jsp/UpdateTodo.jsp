@@ -1,18 +1,5 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
-
-<html>
-
-   <head>
-   
-      <title>Update</title>
-      <%@include file = "common/header.jspf" %>
-      <%@include file = "common/navigations.jspf" %>
-   
-  
-   </head>
-   
-   <body>
+<%@include file = "common/header.jspf" %>
+<%@include file = "common/navigations.jspf" %>
    
      <div class = "container">   
      
@@ -45,8 +32,4 @@
      
      </div>
      
-     <%@include file = "common/footer.jspf" %>
-	
-   </body>
-
-</html>
+<%@include file = "common/footer.jspf" %>

@@ -1,15 +1,5 @@
-<%@ taglib prefix="c" uri="jakarta.tags.core"%>
-
-<html>
-	
-	<head>
-		<%@include file="common/header.jspf"%>
-		<title>Todos</title>
-	</head>
-	
-	<body>
-	
-		<%@include file="common/navigations.jspf"%>
+<%@include file = "common/header.jspf" %>
+<%@include file = "common/navigations.jspf"%>
 	
 		<div class="container">
 	
@@ -46,8 +36,6 @@
 	
 		</div>
 	
-		<%@include file="common/footer.jspf"%>
+<%@include file="common/footer.jspf"%>
 	
-	</body>
 
-</html>

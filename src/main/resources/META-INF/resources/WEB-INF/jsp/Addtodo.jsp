@@ -1,16 +1,5 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
-<html>
-
-	<head>
-		<title>Add todo</title>
-		<%@include file = "common/header.jspf" %>
-	
-	</head>
-	
-	<body>
-	
-	  <%@include file = "common/navigations.jspf" %>
+<%@include file = "common/header.jspf" %>
+<%@include file = "common/navigations.jspf" %>
 	
 	  <div class = "container">
 	  
@@ -41,8 +30,6 @@
 			
 	  </div>
 	   
-	</body>
-	
-	<%@include file = "common/footer.jspf" %>
+<%@include file = "common/footer.jspf" %>
 
-</html>
+

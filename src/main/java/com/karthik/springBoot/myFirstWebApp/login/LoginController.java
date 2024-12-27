@@ -27,7 +27,7 @@ public class LoginController {
 		if(authenticateObj.authenticate(name, password)) {
 			model.put("name", name);
 			model.put("password", password);
-			return "welcome";
+			return "Welcome";
 		}
 		
 		model.put("errorMessage", "Invalid credentials ! Please try again.");
