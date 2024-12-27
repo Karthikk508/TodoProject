@@ -31,7 +31,7 @@ public class TodoController {
 		List<Todo> list = serviceObj.listOfTodos(username);
 		model.put("todos", list);
 
-		return "listTodos";
+		return "ListTodos";
 	}
 
 	@RequestMapping(value = "add-todos", method = RequestMethod.GET)
@@ -41,7 +41,7 @@ public class TodoController {
 		Todo todo = new Todo(0, username, "45654", LocalDate.now().plusYears(1), false);
 		model.put("todo", todo);
 
-		return "todo";
+		return "Addtodo";
 	}
 	//
 	// In post request the todo description is bounded with the tag present in the
@@ -55,7 +55,7 @@ public class TodoController {
 
 		if (result.hasErrors()) {
 
-			return "todo";
+			return "Addtodo";
 		}
 
 		String username = (String) model.get("name");
