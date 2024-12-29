@@ -10,15 +10,16 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
 @SessionAttributes("name")
-public class LoginController {
+public class WelcomeController {
 	
 	@Autowired
 	private Authentication authenticateObj;
 	
-	@RequestMapping(value = "login",method = RequestMethod.GET)
-	public String goTologin() {
+	@RequestMapping(value = "/",method = RequestMethod.GET)
+	public String goToWelcomePage(ModelMap model) {
 		
-		return "login";
+		model.put("name", "Karthikeyan");
+		return "Welcome";
 	}
 	
 	@RequestMapping(value = "login",method = RequestMethod.POST)
