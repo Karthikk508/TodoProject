@@ -3,6 +3,8 @@ package com.karthik.springBoot.myFirstWebApp.todo;
 import java.time.LocalDate;
 import java.util.List;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -27,7 +29,7 @@ public class TodoController {
 	@RequestMapping("list-todos")
 	public String todos(ModelMap model) {
 
-		String username = (String) model.get("name");
+		String username = getLoggedInUsername();
 		List<Todo> list = serviceObj.listOfTodos(username);
 		model.put("todos", list);
 
@@ -38,7 +40,7 @@ public class TodoController {
 	public String showNewTodoPage(ModelMap model) {
 
 		String username = (String) model.get("name");
-		Todo todo = new Todo(0, username, "45654", LocalDate.now().plusYears(1), false);
+		Todo todo = new Todo(0, username, "777", LocalDate.now().plusYears(1), false);
 		model.put("todo", todo);
 
 		return "Addtodo";
@@ -75,7 +77,7 @@ public class TodoController {
 	@RequestMapping(value = "update-todo", method = RequestMethod.GET)
 	public String ShowUpdateTodo(@RequestParam int id, ModelMap model) {
 
-		// String username = (String) model.get("name");
+		String username = (String) model.get("name");
 
 		Todo todo = serviceObj.findById(id);
 		model.put("todo", todo);
@@ -93,6 +95,12 @@ public class TodoController {
 		serviceObj.updateTodo(todo);
 
 		return "redirect:list-todos";
+	}
+	
+    public String getLoggedInUsername() {
+		
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		return authentication.getName();
 	}
 
 }

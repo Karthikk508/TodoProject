@@ -32,6 +32,7 @@ public class SpringSecurityConfiguration {
 				                 .password("12345")
 				                 .roles("USER","ADMIN")
 				                 .build();
+		
 		return new InMemoryUserDetailsManager(userDetails);
 	
 	}
