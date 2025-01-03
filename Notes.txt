@@ -38,5 +38,12 @@
    </tbody>
 
 
+// Difference between spring data jpa and jpa :
+
+//  https://stackoverflow.com/questions/16148188/whats-the-difference-between-jpa-and-spring-data-jpa
+
+
+// Connecting MySQL 
+
 
 
